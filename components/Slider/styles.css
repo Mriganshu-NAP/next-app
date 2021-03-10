@@ -1,0 +1,10 @@
+.slide-container{
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+.carousel .slide {
+  background: #fff;
+}
+.carousel .slide img{
+  width: 100%;
+}

@@ -1,0 +1,49 @@
+.banner-container{
+  position: relative;
+}
+.banner-img{
+  width: 100%;
+}
+.banner-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+.heading{
+  font-size: 2.9vw;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.sub-heading{
+  font-size: 1.6vw;
+  margin: 0;
+  font-weight: normal;
+  margin-bottom: 16px;
+  line-height: 3rem;
+}
+.btn-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.shop-btn-container{
+  display: flex;
+  justify-content: center;
+}
+.light-text{
+  color: #fff;
+  justify-content: center;
+}
+.banner-btn:nth-child(1){
+  padding: 10px 30px;
+  margin-right: 15px;
+}
+.banner-btn:nth-child(2){
+  padding: 10px 30px;
+  margin-left: 15px;
+}
