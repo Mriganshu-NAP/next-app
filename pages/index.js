@@ -5,6 +5,7 @@ import { signIn, signOut, useSession } from 'next-auth/client'
 import FullWidthBanner from '../components/FullWidthBanner'
 import Slider from '../components/Slider'
 import BannerSlider from '../components/BannerSlider'
+import PIPSection from '../components/PIPSection'
 // import DemoComponent from '../components/DemoComponent'
 
 const AuthContainer = styled.div`
@@ -39,6 +40,7 @@ export default function Home() {
         />
         <Slider />
         <BannerSlider />
+        <PIPSection />
         {/* <DemoComponent align="center" bgColor="yellow" type="primary" /> */}
         <Link href="https://shopnewage.com/collections/garage-cabinetry" passHref>
           <a>Garage Cabinets</a>

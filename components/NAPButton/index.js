@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Button = styled.button`
   margin: 0 15px;
+  width: max-content;
   cursor: pointer;
   text-align: center;
   background: ${props => 
@@ -53,9 +54,9 @@ const Button = styled.button`
   };
 `;
 
-function NapButton({text, type}) {
+function NapButton({text, type, onClick}) {
   return (
-    <Button type={type} >{text}</Button>
+    <Button type={type} onClick={onClick} >{text}</Button>
   )
 }
 

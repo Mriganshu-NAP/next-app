@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import {ItemContainer} from '../CommonComponents';
-import hb from '../../assets/hb-door.jpg';
 
 const Container = styled.section`
   text-align: center;
@@ -47,31 +46,31 @@ const Text = styled.h2`
 `;
 const items = [{
   id: 1,
-  img: hb,
+  img: '/assets/hb-door.jpg',
   price: '$299.99',
   title: "Home Bar 2-Door Cabinet - 21",
   link: ''
 },{
   id: 2,
-  img: hb,
+  img: '/assets/hb-door.jpg',
   price: '$299.99',
   title: "Home Bar 2-Door Cabinet - 21",
   link: ''
 },{
   id: 3,
-  img: hb,
+  img: '/assets/hb-door.jpg',
   price: '$299.99',
   title: "Home Bar 2-Door Cabinet - 21",
   link: ''
 },{
   id: 4,
-  img: hb,
+  img: '/assets/hb-door.jpg',
   price: '$299.99',
   title: "Home Bar 2-Door Cabinet - 21",
   link: ''
 },{
   id: 5,
-  img: hb,
+  img: '/assets/hb-door.jpg',
   price: '$299.99',
   title: "Home Bar 2-Door Cabinet - 21",
   link: ''
