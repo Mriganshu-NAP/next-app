@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import NAPButton from '../../components/NAPButton';
 import { client } from '../../utils/shopify-client';
+import Skeleton from '@material-ui/lab/Skeleton';
 
 const Container = styled.div`
   display: flex;
@@ -35,7 +36,18 @@ function Shopify({products, collections}) {
   console.log(loading)
   console.log({collections}, {products})
   if(loading){
-    return(<div>Laoding...</div>)
+    return(
+      <>
+        <Heading>Products List</Heading>
+        <Container>
+          {Array.from(new Array(3)).map((item, index) =>(
+          <ItemContainer>
+            <Skeleton variant="rect" animation="wave" width={400} height={300} />
+          </ItemContainer>
+          ))}
+        </Container>
+      </>
+    )
   }
   return (
     <>
