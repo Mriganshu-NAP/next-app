@@ -1,5 +1,5 @@
 import Client from "shopify-buy";
 export const client = Client.buildClient({
-  storefrontAccessToken: process.env.SHOPIFY_STORE_FRONT_ACCESS_TOKEN,
-  domain: process.env.SHOPIFY_STORE_DOMAIN
+  storefrontAccessToken: '97566f2ee25bfd1d82b1043434191816',
+  domain: 'shopnewage.myshopify.com'
 });

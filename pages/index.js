@@ -6,6 +6,8 @@ import FullWidthBanner from '../components/FullWidthBanner'
 import Slider from '../components/Slider'
 import BannerSlider from '../components/BannerSlider'
 import PIPSection from '../components/PIPSection'
+import Gallery from '../components/Gallery'
+import GalleryHomeBar from '../components/Gallery-HomeBar'
 // import DemoComponent from '../components/DemoComponent'
 
 const AuthContainer = styled.div`
@@ -39,8 +41,11 @@ export default function Home() {
           heading="Slatwall Accessories"
         />
         <Slider />
-        <BannerSlider />
+        <BannerSlider arrows />
         <PIPSection />
+        <Gallery />
+        <br /> <br />
+        <GalleryHomeBar />
         {/* <DemoComponent align="center" bgColor="yellow" type="primary" /> */}
         <Link href="https://shopnewage.com/collections/garage-cabinetry" passHref>
           <a>Garage Cabinets</a>

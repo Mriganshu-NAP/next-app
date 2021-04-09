@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  margin: 0 15px;
-  width: max-content;
+  margin: ${props => props.margin};
+  width: ${props => props.width};
   cursor: pointer;
   text-align: center;
   background: ${props => 
@@ -54,15 +54,17 @@ const Button = styled.button`
   };
 `;
 
-function NapButton({text, type, onClick}) {
+function NapButton({text, type, onClick, margin, width, loading}) {
   return (
-    <Button type={type} onClick={onClick} >{text}</Button>
+    <Button margin={margin} width={width} type={type} onClick={onClick} >{text} {loading && <i className="fa fa-spinner fa-spin"></i>}</Button>
   )
 }
 
 NapButton.defaultProps= {
   text: 'Button',
-  type: 'primary'
+  type: 'primary',
+  width: 'max-content',
+  margin: '0 15px'
 }
 
 export default NapButton;

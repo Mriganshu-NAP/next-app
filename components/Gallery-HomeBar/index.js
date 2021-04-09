@@ -53,47 +53,71 @@ export const rows = [
   [
     {
       id: 1,
-      img: '/assets/clg-1.jpg',
+      img: '/assets/bar-collage/clg-1.png',
       title: 'Bikes and Sports Equipment',
-      cover: '100%',
-      height: 1099,
-      width: 663
-    }
-  ],
-  [
-    {
-      id: 2,
-      img: '/assets/clg-2.jpg',
-      title: 'Small Tool Storage',
-      cover: '40%',
-      height: 374,
-      width: 470
+      cover: '50%',
+      height: 808,
+      width: 738
     },
     {
-      id: 3,
-      img: '/assets/clg-3.jpg',
-      title: 'Golf Bags and Gear',
-      cover: '60%',
-      height: 696,
-      width: 470
+      id: 2,
+      img: '/assets/bar-collage/clg-2.png',
+      title: 'Bikes and Sports Equipment',
+      cover: '50%',
+      height: 1014,
+      width: 738
     }
   ],
   [
     {
+      id: 3,
+      img: '/assets/bar-collage/clg-3.png',
+      title: 'Small Tool Storage',
+      cover: '20%',
+      height: 419,
+      width: 524
+    },
+    {
       id: 4,
-      img: '/assets/clg-4.jpg',
-      title: 'Ladders and Bulky Items',
-      cover: '60%',
-      height: 690,
-      width: 663
+      img: '/assets/bar-collage/clg-4.png',
+      title: 'Golf Bags and Gear',
+      cover: '40%',
+      height: 783,
+      width: 524
     },
     {
       id: 5,
-      img: '/assets/clg-5.jpg',
-      title: 'Small Item Storage',
+      img: '/assets/bar-collage/clg-5.png',
+      title: 'Bikes and Sports Equipment',
+      cover: '30%',
+      height: 600,
+      width: 524
+    }
+  ],
+  [
+    {
+      id: 6,
+      img: '/assets/bar-collage/clg-6.png',
+      title: 'Ladders and Bulky Items',
       cover: '40%',
-      height: 373,
-      width: 663
+      height: 778,
+      width: 738
+    },
+    {
+      id: 7,
+      img: '/assets/bar-collage/clg-7.png',
+      title: 'Small Item Storage',
+      cover: '30%',
+      height: 510,
+      width: 738
+    },
+    {
+      id: 8,
+      img: '/assets/bar-collage/clg-8.png',
+      title: 'Bikes and Sports Equipment',
+      cover: '30%',
+      height: 514,
+      width: 738
     }
   ]
 ]
@@ -139,7 +163,7 @@ const Caption = (text) => {
   )
 }
 
-function Gallery({caption, showPopUp, zoomOnHover, items, popUpItems}) {
+function GalleryHomeBar({caption, showPopUp, zoomOnHover, items, popUpItems}) {
   const [modal, setModal] = useState(false);
   const [active, setActive] = useState(null);
 
@@ -149,9 +173,9 @@ function Gallery({caption, showPopUp, zoomOnHover, items, popUpItems}) {
   }
 
   return (
-    <Container>
+    <Container id="gallery">
       {items.map((row, index) => (
-        <RowItems key={index}>
+        <RowItems key={index} data-scroll data-scroll-speed={index % 2 ? "1" : "-1"} data-scroll-position={"vertical"} data-scroll-target="#gallery">
           {row.map((item) => (
             <ImageContainer key={item.id} height={item.cover} onClick={() => handleClick(item.id)}>
               <StyledImage zoom={zoomOnHover} src={item.img} height={item.height} width={item.width} alt="nap-demo" />
@@ -173,12 +197,12 @@ function Gallery({caption, showPopUp, zoomOnHover, items, popUpItems}) {
   )
 }
 
-Gallery.defaultProps = {
+GalleryHomeBar.defaultProps = {
   caption: false,
-  showPopUp: true,
-  zoomOnHover: true,
+  showPopUp: false,
+  zoomOnHover: false,
   items: rows,
   popUpItems: modalItems
 }
 
-export default Gallery;
+export default GalleryHomeBar;

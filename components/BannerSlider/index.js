@@ -14,25 +14,33 @@ export const imageProps = [
     img: '/assets/slider.jpg',
     heading: "Just a simple heading",
     subHeading: "Another simple sub heading",
-    buttons: ["Buy Now"]
+    buttons: ["Buy Now"],
+    height: 600,
+    width: 1500
   },
   {
     img: '/assets/slider.jpg',
     heading: "Just a simple heading",
     subHeading: "Another simple sub heading",
-    buttons: ["Buy Now"]
+    buttons: ["Buy Now"],
+    height: 600,
+    width: 1500
   },
   {
     img: '/assets/slider.jpg',
     heading: "Just a simple heading",
     subHeading: "Another simple sub heading",
-    buttons: ["Buy Now"]
+    buttons: ["Buy Now"],
+    height: 600,
+    width: 1500
   },
   {
     img: '/assets/slider.jpg',
     heading: "Just a simple heading",
     subHeading: "Another simple sub heading",
-    buttons: ["Buy Now"]
+    buttons: ["Buy Now"],
+    height: 600,
+    width: 1500
   }
 ]
 
@@ -44,7 +52,7 @@ const BannerSlider = ({dots, arrows, arrowsColor, items, activeSlide}) => {
     const temp = [];
     items.forEach(item => (temp.push(
       <Container>
-        <Image src={item.img} width={1500} height={600} layout='responsive' alt="demo" />
+        <Image src={item.img} height={item.height} width={item.width} layout='responsive' alt="demo" />
         {item.heading && 
           <BannerContent
             heading={item.heading}
